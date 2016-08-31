@@ -10,3 +10,4 @@ choco install -y virtualbox
 choco install -y vagrant
 choco install -y putty.install
 choco install -y packer
+choco install -y mysql.workbench
