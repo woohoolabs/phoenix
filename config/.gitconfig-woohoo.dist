@@ -1,0 +1,13 @@
+[user]
+	name = $GIT_USER_NAME
+	email = $GIT_USER_NAME
+	signingkey = $GIT_USER_KEY
+[core]
+	excludesfile = /Users/$USER_NAME/.gitignore-woohoo
+	editor = nano
+[gpg]
+	program = /usr/local/bin/gpg
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[url "ssh://git@gitlab.com/"]
+	insteadOf = https://gitlab.com/
