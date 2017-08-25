@@ -1,66 +1,46 @@
 #!/usr/bin/env bash
 
-echo -e "Installing Xcode..."
-xcode-select --install
-
-echo -e "Installing Homebrew..."
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-echo -e "Installing Zsh..."
-brew install zsh
-
-echo -e "Installing iTerm2..."
-brew cask install iterm2
-
-echo -e "Installing Bash completions..."
-brew install bash-completion
-brew tap homebrew/completions
-brew install docker-completion
-brew install docker-compose-completion
-brew install docker-machine-completion
-brew install vagrant-completion
+sudo apt-get update
 
 echo -e "Installing Gettext..."
-brew install gettext
+bsudo apt-get -y install gettext
 ln -s /usr/local/opt/gettext/bin/envsubst /usr/local/bin/envsubst
+
+echo -e "Installing Bash completion..."
 
 if [ "$CHROME_INSTALL" == "1" ]; then
     echo -e "Installing Chrome..."
-    brew cask install google-chrome
 fi
 
 if [ "$GIT_INSTALL" == "1" ]; then
     echo -e "Installing Git..."
-    brew install git
+    sudo apt-get -y install git
 fi
 
 if [ "$GPG_INSTALL" == "1" ]; then
-    echo -e "Installing GPG Suite..."
-    brew install gpgtools
+    echo -e "Installing GPG..."
+    sudo apt-get -y install gpg
 fi
 
 if [ "$DOCKER_INSTALL" == "1" ]; then
     echo -e "Installing Docker..."
-    brew cask install docker
+    sudo apt-get -y install docker
 fi
 
 if [ "$VIRTUALBOX_INSTALL" == "1" ]; then
     echo -e "Installing Virtualbox..."
-    brew cask install virtualbox
+    sudo apt-get -y install virtualbox
 fi
 
 if [ "$VAGRANT_INSTALL" == "1" ]; then
     echo -e "Installing Vagrant..."
-    brew cask install vagrant
-    brew cask install vagrant-manager
+    sudo apt-get -y install vagrant
+    sudo apt-get -y install vagrant-manager
 fi
 
 if [ "$PHP_INSTALL" == "1" ]; then
     echo -e "Installing PHP..."
-    brew tap homebrew/dupes
-    brew tap homebrew/versions
-    brew tap homebrew/homebrew-php
-    brew install php71
+    sudo apt-get -y install php71
 fi
 
 if [ "$COMPOSER_INSTALL" == "1" ]; then
@@ -75,20 +55,20 @@ fi
 
 if [ "$PHPSTORM_INSTALL" == "1" ]; then
     echo -e "Installing PHPStorm..."
-    brew cask install phpstorm
+    sudo apt-get -y install phpstorm
 fi
 
 if [ "$MYSQL_WORKBENCH_INSTALL" == "1" ]; then
     echo -e "Installing MySQL Workbench..."
-    brew cask install mysqlworkbench
+    sudo apt-get -y install mysqlworkbench
 fi
 
 if [ "$POEDIT_INSTALL" == "1" ]; then
     echo -e "Installing Poedit..."
-    brew cask install poedit
+    sudo apt-get -y install poedit
 fi
 
 if [ "$POSTMAN_INSTALL" == "1" ]; then
     echo -e "Installing Postman..."
-    brew cask install postman
+    sudo apt-get -y install postman
 fi

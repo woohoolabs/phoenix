@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Paste your public key here
+$GPG_PUBLIC_KEY=<<EOF
+
+EOF
+
+# Paste your private key here
+$GPG_PRIVATE_KEY=<<EOF
+
+EOF
