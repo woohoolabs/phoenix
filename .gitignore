@@ -1,9 +1,6 @@
 config/.env
 config/bash/.bash_profile
-config/bash/.bash_profile_woohoo.sh
 config/git/.gitconfig
-config/git/.gitconfig-woohoo
-config/git/.gitignore-woohoo
 config/gpg/key
 config/ssh/config
 config/ssh/id_rsa

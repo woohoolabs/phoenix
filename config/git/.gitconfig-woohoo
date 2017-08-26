@@ -3,7 +3,7 @@
     email = $GIT_USER_EMAIL
     signingkey = $GIT_USER_KEY
 [core]
-    excludesfile = /Users/$USER_NAME/.gitignore-woohoo
+    excludesfile = /Users/$USER/.gitignore-woohoo
     editor = nano
 [commit]
     gpgsign = true
