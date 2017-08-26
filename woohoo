@@ -13,6 +13,12 @@ if [ "$SUBCOMMAND" == "install" ]; then
 
     ./src/$PLATFORM/install.sh
 
+elif [ "$SUBCOMMAND" == "config" ]; then
+
+    ./src/$PLATFORM/bash.sh config
+    ./src/$PLATFORM/git.sh config
+    ./src/$PLATFORM/ssh.sh config
+
 elif [ "$SUBCOMMAND" == "ssh" ]; then
 
     ./src/$PLATFORM/ssh.sh "$@"
@@ -25,6 +31,7 @@ elif [ "$SUBCOMMAND" == "help" ]; then
 
     echo -e "Available subcommands:"
     echo -e "    install: Install programs you need"
+    echo -e "    config : Configure programs you need"
     echo -e "    help   : List the available subcommands"
 
 else

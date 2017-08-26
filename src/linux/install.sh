@@ -4,7 +4,7 @@ sudo apt-get update
 
 echo -e "Installing Gettext..."
 bsudo apt-get -y install gettext
-ln -s /usr/local/opt/gettext/bin/envsubst /usr/local/bin/envsubst
+ln -s -f /usr/local/opt/gettext/bin/envsubst /usr/local/bin/envsubst
 
 echo -e "Installing Bash completion..."
 

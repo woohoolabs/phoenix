@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PLATFORM=""
+export PLATFORM=""
 function detect_platform {
     unamestr=`uname`
     if [[ "$unamestr" == "Linux" ]]; then

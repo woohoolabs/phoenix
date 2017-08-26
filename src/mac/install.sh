@@ -22,7 +22,7 @@ brew install vagrant-completion
 
 echo -e "Installing Gettext..."
 brew install gettext
-ln -s /usr/local/opt/gettext/bin/envsubst /usr/local/bin/envsubst
+ln -s -f /usr/local/opt/gettext/bin/envsubst /usr/local/bin/envsubst
 
 if [ "$CHROME_INSTALL" == "1" ]; then
     echo -e "Installing Chrome..."

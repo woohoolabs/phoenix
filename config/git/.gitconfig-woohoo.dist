@@ -1,6 +1,6 @@
 [user]
 	name = $GIT_USER_NAME
-	email = $GIT_USER_NAME
+	email = $GIT_USER_EMAIL
 	signingkey = $GIT_USER_KEY
 [core]
 	excludesfile = /Users/$USER_NAME/.gitignore-woohoo

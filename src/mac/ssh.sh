@@ -2,12 +2,14 @@
 
 if [ "$1" == "config" ]; then
 
+    echo -e "Copying SSH configuration file..."
+
     # Setting up the SSH directory
     mkdir -p ~/.ssh/
     chmod -R 700 ~/.ssh/
 
-    cp ./config/ssh/config > ~/.ssh/$2
-    chmod 600 ~/.ssh/$2.pub
+    cp ./config/ssh/config ~/.ssh/config
+    chmod 644 ~/.ssh/config
 
 elif [ "$1" == "generate" ]; then
 
