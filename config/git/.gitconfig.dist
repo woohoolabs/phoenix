@@ -1,2 +1,2 @@
 [includeIf "gitdir:~/dev/"]
-  path = .gitconfig-woohoo
+    path = .gitconfig-woohoo
