@@ -4,8 +4,8 @@ if [ "$1" == "config" ]; then
 
     echo -e "Copying global Bash configuration files..."
 
-    cp config/bash/.bash_profile ~/.bash_profile
-    cp config/bash/.bash_profile_woohoo.sh ~/.bash_profile_woohoo.sh
+    cp $BASEPATH/config/bash/.bash_profile ~/.bash_profile
+    cp $BASEPATH/config/bash/.bash_profile_woohoo.sh ~/.bash_profile_woohoo.sh
 
 elif [ "$1" == "help" ]; then
 
@@ -15,6 +15,6 @@ elif [ "$1" == "help" ]; then
 
 else
 
-    ./woohoo bash help
+    $BASEPATH/woohoo bash help
 
 fi

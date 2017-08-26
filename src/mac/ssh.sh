@@ -8,7 +8,7 @@ if [ "$1" == "config" ]; then
     mkdir -p ~/.ssh/
     chmod -R 700 ~/.ssh/
 
-    cp ./config/ssh/config ~/.ssh/config
+    cp $BASEPATH/config/ssh/config ~/.ssh/config
     chmod 644 ~/.ssh/config
 
 elif [ "$1" == "generate" ]; then
@@ -36,7 +36,7 @@ elif [ "$1" == "import" ]; then
     mkdir -p ~/.ssh/
     chmod -R 700 ~/.ssh/
 
-    source ./config/ssh/$2.sh
+    source $BASEPATH/config/ssh/$2.sh
 
     # Creating the public key
     echo $SSH_PUBLIC_KEY > ~/.ssh/$2.pub
@@ -46,7 +46,7 @@ elif [ "$1" == "import" ]; then
     echo $SSH_PRIVATE_KEY > ~/.ssh/$2
     chmod 600 ~/.ssh/$2.pub
 
-    rm ./config/ssh/$2.sh
+    rm $BASEPATH/config/ssh/$2.sh
 
 elif [ "$1" == "help" ]; then
 
@@ -58,6 +58,6 @@ elif [ "$1" == "help" ]; then
 
 else
 
-    ./woohoo ssh help
+    $BASEPATH/woohoo ssh help
 
 fi

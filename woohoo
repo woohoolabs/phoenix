@@ -1,31 +1,31 @@
 #!/usr/bin/env bash
 
-source src/helper.sh
-source config/.env
+export BASEPATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source $BASEPATH/src/helper.sh
+source $BASEPATH/config/.env
 
 detect_platform
-ln -s -f ./woohoo /usr/local/bin/woohoo
 
 SUBCOMMAND=$1
 shift 1
 
 if [ "$SUBCOMMAND" == "install" ]; then
 
-    ./src/$PLATFORM/install.sh
+    $BASEPATH/src/$PLATFORM/install.sh
 
 elif [ "$SUBCOMMAND" == "config" ]; then
 
-    ./src/$PLATFORM/bash.sh config
-    ./src/$PLATFORM/git.sh config
-    ./src/$PLATFORM/ssh.sh config
+    $BASEPATH/src/$PLATFORM/bash.sh config
+    $BASEPATH/src/$PLATFORM/git.sh config
+    $BASEPATH/src/$PLATFORM/ssh.sh config
 
 elif [ "$SUBCOMMAND" == "ssh" ]; then
 
-    ./src/$PLATFORM/ssh.sh "$@"
+    $BASEPATH/src/$PLATFORM/ssh.sh "$@"
 
 elif [ "$SUBCOMMAND" == "gpg" ]; then
 
-    ./src/$PLATFORM/gpg.sh "$@"
+    $BASEPATH/src/$PLATFORM/gpg.sh "$@"
 
 elif [ "$SUBCOMMAND" == "help" ]; then
 
@@ -36,6 +36,6 @@ elif [ "$SUBCOMMAND" == "help" ]; then
 
 else
 
-    ./woohoo help
+    $BASEPATH/woohoo help
 
 fi

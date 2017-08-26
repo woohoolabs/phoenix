@@ -21,7 +21,7 @@ elif [ "$1" == "import" ]; then
 
     # Creating the private key
 
-    rm ./config/ssh/$2.sh
+    rm $BASEPATH/config/ssh/$2.sh
 
 elif [ "$1" == "help" ]; then
 
@@ -32,6 +32,6 @@ elif [ "$1" == "help" ]; then
 
 else
 
-    ./woohoo gpg help
+    $BASEPATH/woohoo gpg help
 
 fi

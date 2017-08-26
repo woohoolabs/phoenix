@@ -9,3 +9,5 @@ function detect_platform {
         PLATFORM="mac"
     fi
 }
+
+ln -s -f $BASEPATH/woohoo /usr/local/bin/woohoo
