@@ -4,3 +4,4 @@ config/git/.gitconfig
 config/gpg/key
 config/ssh/config
 config/ssh/id_rsa
+config/zsh/.zshrc

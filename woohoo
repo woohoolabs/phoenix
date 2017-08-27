@@ -17,6 +17,7 @@ elif [ "$SUBCOMMAND" == "config" ]; then
 
     $BASEPATH/src/$PLATFORM/settings.sh
     $BASEPATH/src/$PLATFORM/bash.sh config
+    $BASEPATH/src/$PLATFORM/zsh.sh config
     $BASEPATH/src/$PLATFORM/git.sh config
     $BASEPATH/src/$PLATFORM/ssh.sh config
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
+
 # Show Git status
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'

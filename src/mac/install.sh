@@ -12,6 +12,15 @@ brew install zsh
 echo -e "Installing iTerm2..."
 brew cask install iterm2
 
+echo -e "Installing Oh-My-Zshell..."
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo -e "Installing Powerline fonts..."
+git clone https://github.com/powerline/fonts.git /Library/Fonts/Powerline\ Fonts
+powerline-daemon -q
+powerline_base=$(pip show powerline-status | awk '{FS = ": "} $1 ~ /Location/ {print $2}')
+source "${powerline_base}/powerline/bindings/zsh/powerline.zsh"
+
 echo -e "Installing Bash completions..."
 brew install bash-completion
 brew tap homebrew/completions

@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+source .zshrc_woohoo.zsh
+
+# Customize your settings here

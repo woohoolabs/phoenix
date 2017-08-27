@@ -1,14 +1,27 @@
 #!/usr/bin/env bash
 
-echo -e "Setting sleep timeout to 2 minutes when on battery..."
-sudo pmset -b sleep 2
+echo -e "Setting standby delay to 4 hours..."
+sudo pmset -a standbydelay 14400
 
-echo -e "Setting sleep timeout to 10 minutes when plugged in..."
-sudo pmset -b sleep 10
+echo -e "Setting timeouts when on battery..."
+sudo pmset -b         \
+    sleep          10 \
+    disksleep      0  \
+    displaysleep   5  \
+    halfdim        1
 
-echo -e "Enabling screen saver after 2 minutes..."
-sudo osascript -e 'tell application "System Events" to set delay interval of screen saver preferences to 2'
+echo -e "Setting timeouts when on power adapter..."
+sudo pmset -c         \
+    sleep          10  \
+    disksleep      0  \
+    displaysleep   30 \
+    halfdim        1  \
+    autorestart    1  \
+    womp           1
 
 echo -e "Requiring password after sleep..."
 sudo defaults write com.apple.screensaver askForPassword -int 1
 sudo defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+echo -e "Configuring the default shell..."
+sudo chsh -s $DEFAULT_SHELL
