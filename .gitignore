@@ -1,7 +1,8 @@
 config/.env
 config/bash/.bash_profile
 config/git/.gitconfig
-config/gpg/key
+config/gpg/gpg.conf
+config/gpg/*.asc
 config/ssh/config
 config/ssh/id_rsa
 config/zsh/.zshrc

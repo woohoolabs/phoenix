@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-source .bash_profile_woohoo.sh
+source ~/.bash_profile_woohoo.sh
 
 # Customize your settings here
