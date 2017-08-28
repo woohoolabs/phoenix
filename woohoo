@@ -2,7 +2,7 @@
 
 export BASEPATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source $BASEPATH/src/helper.sh
-source $BASEPATH/config/.env
+source $BASEPATH/config/config.sh
 
 detect_platform
 

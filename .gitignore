@@ -1,4 +1,4 @@
-config/.env
+config/config.sh
 config/bash/.bash_profile
 config/git/.gitconfig
 config/gpg/gpg.conf
