@@ -9,8 +9,7 @@
 
 * [Introduction](#introduction)
 * [Install](#install)
-* [Basic Usage](#basic-usage)
-* [Advanced Usage](#advanced-usage)
+* [Usage](#usage)
 * [Examples](#examples)
 * [Versioning](#versioning)
 * [Change Log](#change-log)
@@ -21,13 +20,59 @@
 
 ## Introduction
 
+Woohoo Labs. Dev Environment helps you setting up and installing your development environment whatever platform you use.
+
 ## Install
 
-## Basic Usage
+You have to clone the project first in order to install it:
 
-## Advanced Usage
+```bash
+git clone git@github.com:woohoolabs/dev-environment.git
+```
 
-## Examples
+If you want the `woohoo` command to be available system-wide then run the following script too:
+
+```bash
+ln -s ./dev-environment/woohoo /usr/local/bin/woohoo
+```
+
+Finally, you have to create the configuration files by running the following commands:
+
+```bash
+# Create the main configuration file
+cp config/config.sh.dist config/config.sh
+
+# Create Bash configuration
+cp config/bash/.bash_profile.dist config/bash/.bash_profile
+
+# Create Git configuration
+cp config/git/.gitconfig.dist config/git/.gitconfig
+
+# Create GPG configuration
+cp config/gpg/gpg.conf.dist config/gpg/gpg.conf
+
+# Create SSH configuration
+cp config/ssh/config.dist config/ssh/config
+
+# Create ZSH configuration
+cp config/zsh/.zshrc.dist config/zsh/.zshrc
+```
+
+## Usage
+
+The `woohoo` command provides several subcommands:
+
+### install
+
+### verify
+
+### config
+
+### ssh
+
+### gpg
+
+You can refer to the `woohoo help` command for the current list of supported operations. 
 
 ## Versioning
 
