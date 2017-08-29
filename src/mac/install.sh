@@ -14,6 +14,7 @@ brew cask install iterm2
 
 echo -e "Installing Oh-My-Zshell..."
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone --depth 1 https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
 echo -e "Installing Powerline fonts..."
 git clone https://github.com/powerline/fonts.git /Library/Fonts/Powerline\ Fonts
