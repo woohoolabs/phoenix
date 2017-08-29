@@ -3,6 +3,11 @@
 echo -e "Homebrew:"
 brew -v
 
+if [ "$ZSH_INSTALL" == "1" ]; then
+    echo -e "ZSH:"
+    zsh --version
+fi
+
 if [ "$CHROME_INSTALL" == "1" ]; then
     echo -e "Chrome:"
     brew cask info google-chrome

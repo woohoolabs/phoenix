@@ -1,8 +1,8 @@
 #!/bin/zsh
 
-export ZSH=$HOME/.oh-my-zsh
-
 export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
+
+ZSH=$HOME/.oh-my-zsh
 
 export DEFAULT_USER="$USER"
 

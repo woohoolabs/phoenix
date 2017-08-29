@@ -3,6 +3,12 @@
 # Default shell
 export DEFAULT_SHELL=/bin/zsh
 
+# Working directory
+export WOOHOO_HOME=~/woohoo
+
+# Zsh
+export ZSH_INSTALL=1
+
 # Chrome
 export CHROME_INSTALL=1
 

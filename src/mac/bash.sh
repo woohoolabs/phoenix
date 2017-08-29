@@ -2,7 +2,7 @@
 
 if [ "$1" == "config" ]; then
 
-    echo -e "Copying global Bash configuration files..."
+    echo -e "Copying Bash configuration files..."
 
     cp $BASEPATH/config/bash/.bash_profile ~/.bash_profile
     cp $BASEPATH/config/bash/.bash_profile_woohoo.sh ~/.bash_profile_woohoo.sh

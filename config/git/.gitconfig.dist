@@ -1,2 +1,2 @@
-[includeIf "gitdir:~/dev/"]
-    path = .gitconfig-woohoo
+[includeIf "gitdir:$WOOHOO_HOME/"]
+    path = ~/.gitconfig-woohoo

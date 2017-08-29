@@ -2,8 +2,9 @@
 
 if [ "$1" == "config" ]; then
 
-    echo -e "Copying global Zsh configuration files..."
+    echo -e "Copying Zsh configuration files..."
 
+    envsubst < $BASEPATH/config/zsh/.warprc > ~/.warprc
     cp $BASEPATH/config/zsh/.zshrc ~/.zshrc
     cp $BASEPATH/config/zsh/.zshrc_woohoo.zsh ~/.zshrc_woohoo.zsh
 

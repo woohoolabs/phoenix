@@ -6,21 +6,9 @@ xcode-select --install
 echo -e "Installing Homebrew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo -e "Installing Zsh..."
-brew install zsh
-
-echo -e "Installing iTerm2..."
-brew cask install iterm2
-
-echo -e "Installing Oh-My-Zshell..."
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone --depth 1 https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-
-echo -e "Installing Powerline fonts..."
-git clone https://github.com/powerline/fonts.git /Library/Fonts/Powerline\ Fonts
-powerline-daemon -q
-powerline_base=$(pip show powerline-status | awk '{FS = ": "} $1 ~ /Location/ {print $2}')
-source "${powerline_base}/powerline/bindings/zsh/powerline.zsh"
+echo -e "Installing Gettext..."
+brew install gettext
+ln -s -f /usr/local/opt/gettext/bin/envsubst /usr/local/bin/envsubst
 
 echo -e "Installing Bash completions..."
 brew install bash-completion
@@ -30,9 +18,23 @@ brew install docker-compose-completion
 brew install docker-machine-completion
 brew install vagrant-completion
 
-echo -e "Installing Gettext..."
-brew install gettext
-ln -s -f /usr/local/opt/gettext/bin/envsubst /usr/local/bin/envsubst
+if [ "$ZSH_INSTALL" == "1" ]; then
+    echo -e "Installing Zsh..."
+    brew install zsh
+
+    echo -e "Installing iTerm2..."
+    brew cask install iterm2
+
+    echo -e "Installing Oh-My-Zshell..."
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    git clone --depth 1 https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+    echo -e "Installing Powerline fonts..."
+    git clone https://github.com/powerline/fonts.git /Library/Fonts/Powerline\ Fonts
+    powerline-daemon -q
+    powerline_base=$(pip show powerline-status | awk '{FS = ": "} $1 ~ /Location/ {print $2}')
+    source "${powerline_base}/powerline/bindings/zsh/powerline.zsh"
+fi
 
 if [ "$CHROME_INSTALL" == "1" ]; then
     echo -e "Installing Chrome..."

@@ -6,3 +6,4 @@ config/gpg/*.asc
 config/ssh/config
 config/ssh/id_rsa
 config/zsh/.zshrc
+config/zsh/.warprc

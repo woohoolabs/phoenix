@@ -10,7 +10,6 @@
 * [Introduction](#introduction)
 * [Install](#install)
 * [Usage](#usage)
-* [Examples](#examples)
 * [Versioning](#versioning)
 * [Change Log](#change-log)
 * [Contributing](#contributing)
@@ -56,6 +55,9 @@ cp config/ssh/config.dist config/ssh/config
 
 # Create ZSH configuration
 cp config/zsh/.zshrc.dist config/zsh/.zshrc
+
+# Create Warp configuration
+cp config/zsh/.warprc.dist config/zsh/.warprc
 ```
 
 ## Usage
