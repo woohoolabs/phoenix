@@ -13,6 +13,10 @@ if [ "$SUBCOMMAND" == "install" ]; then
 
     $BASEPATH/src/$PLATFORM/install.sh
 
+elif [ "$SUBCOMMAND" == "verify" ]; then
+
+    $BASEPATH/src/$PLATFORM/verify.sh
+
 elif [ "$SUBCOMMAND" == "config" ]; then
 
     $BASEPATH/src/$PLATFORM/settings.sh
@@ -34,6 +38,7 @@ elif [ "$SUBCOMMAND" == "help" ]; then
 
     echo -e "Available subcommands:"
     echo -e "    install: Install programs you need"
+    echo -e "    verify : Verify if programs are successfully installed"
     echo -e "    config : Configure programs you need"
     echo -e "    help   : List the available subcommands"
 
