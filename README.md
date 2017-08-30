@@ -1,9 +1,9 @@
-# Woohoo Labs. Dev Environment
+# Woohoo Labs. Phoenix
 
 [![Software License][ico-license]](LICENSE.md)
 [![Gitter][ico-gitter]][link-gitter]
 
-**Woohoo Labs. Dev Environment is a simple configuration management tool.**
+**Woohoo Labs. Phoenix is a simple configuration management tool for your development environment.**
 
 ## Table of Contents
 
@@ -19,20 +19,20 @@
 
 ## Introduction
 
-Woohoo Labs. Dev Environment helps you setting up and installing your development environment whatever platform you use.
+Woohoo Labs. Phoenix helps you setting up and installing your development environment whatever platform you use.
 
 ## Install
 
 You have to clone the project first in order to install it:
 
 ```bash
-git clone git@github.com:woohoolabs/dev-environment.git
+git clone git@github.com:woohoolabs/phoenix.git
 ```
 
 If you want the `woohoo` command to be available system-wide then run the following script too:
 
 ```bash
-ln -s ./dev-environment/woohoo /usr/local/bin/woohoo
+ln -s ./phoenix/woohoo /usr/local/bin/woohoo
 ```
 
 Finally, you have to create the configuration files by running the following commands:
@@ -102,8 +102,8 @@ Please see [SUPPORT](SUPPORT.md) for details.
 The MIT License (MIT). Please see the [License File](LICENSE.md) for more information.
 
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg
-[ico-gitter]: https://badges.gitter.im/woohoolabs/dev-environment.svg
+[ico-gitter]: https://badges.gitter.im/woohoolabs/phoenix.svg
 
 [link-author]: https://github.com/kocsismate
 [link-contributors]: ../../contributors
-[link-gitter]: https://gitter.im/woohoolabs/dev-environment?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
+[link-gitter]: https://gitter.im/woohoolabs/phoenix?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
