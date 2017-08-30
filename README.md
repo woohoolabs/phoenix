@@ -1,5 +1,7 @@
 # Woohoo Labs. Phoenix
 
+[![Join the chat at https://gitter.im/woohoolabs/phoenix](https://badges.gitter.im/woohoolabs/phoenix.svg)](https://gitter.im/woohoolabs/phoenix?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Software License][ico-license]](LICENSE.md)
 [![Gitter][ico-gitter]][link-gitter]
 
