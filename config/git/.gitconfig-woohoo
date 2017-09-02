@@ -2,14 +2,25 @@
     name = $GIT_USER_NAME
     email = $GIT_USER_EMAIL
     signingkey = $GIT_USER_KEY
+
 [core]
     excludesfile = ~/.gitignore-woohoo
     editor = nano
+
 [commit]
     gpgsign = true
+
+[push]
+  default = simple
+
+[status]
+  showUntrackedFiles = all
+
 [gpg]
     program = /usr/local/bin/gpg
+
 [url "ssh://git@github.com/"]
     insteadOf = https://github.com/
+
 [url "ssh://git@gitlab.com/"]
     insteadOf = https://gitlab.com/
