@@ -29,13 +29,7 @@ You have to clone the project first in order to install it:
 git clone git@github.com:woohoolabs/phoenix.git
 ```
 
-If you want the `woohoo` command to be available system-wide then run the following script too:
-
-```bash
-ln -s ./phoenix/woohoo /usr/local/bin/woohoo
-```
-
-Finally, you have to create the configuration files by running the following commands:
+Then you have to create the configuration files by running the following commands:
 
 ```bash
 # Create the main configuration file

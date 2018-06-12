@@ -2,6 +2,8 @@
 
 export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
 
+alias woohoo='~/woohoo/phoenix/woohoo'
+
 ZSH=$HOME/.oh-my-zsh
 
 export DEFAULT_USER="$USER"
