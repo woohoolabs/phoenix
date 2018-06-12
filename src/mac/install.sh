@@ -91,7 +91,7 @@ fi
 
 if [ "$PHPSTORM_INSTALL" == "1" ]; then
     echo -e "Installing PHPStorm..."
-    brew cask install phpstorm
+    brew cask install jetbrains-toolbox
 fi
 
 if [ "$MYSQL_WORKBENCH_INSTALL" == "1" ]; then
