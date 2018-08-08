@@ -65,6 +65,11 @@ if [ "$PHPSTORM_INSTALL" == "1" ]; then
     brew cask info phpstorm
 fi
 
+if [ "$NGINX_INSTALL" == "1" ]; then
+    echo -e "Nginx:"
+    brew info nginx
+fi
+
 if [ "$MYSQL_WORKBENCH_INSTALL" == "1" ]; then
     echo -e "MySQL Workbench:"
     brew cask info mysqlworkbench

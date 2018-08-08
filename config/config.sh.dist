@@ -43,6 +43,9 @@ export PHP_STORM_INSTALL=1
 # MySQL Workbench
 export MYSQL_WORKBENCH_INSTALL=1
 
+# Nginx
+export NGINX_INSTALL=1
+
 # Poedit
 export POEDIT_INSTALL=1
 

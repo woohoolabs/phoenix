@@ -94,6 +94,11 @@ if [ "$PHPSTORM_INSTALL" == "1" ]; then
     brew cask install jetbrains-toolbox
 fi
 
+if [ "$NGINX_INSTALL" == "1" ]; then
+    echo -e "Installing NGINX..."
+    brew install nginx
+fi
+
 if [ "$MYSQL_WORKBENCH_INSTALL" == "1" ]; then
     echo -e "Installing MySQL Workbench..."
     brew cask install mysqlworkbench
