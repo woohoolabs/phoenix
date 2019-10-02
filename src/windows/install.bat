@@ -6,8 +6,6 @@ choco install -y notepadplusplus.install
 choco install -y git.install /GitAndUnixToolsOnPath
 choco install -y sourcetree
 choco install -y githubforwindows
-choco install -y virtualbox
-choco install -y vagrant
 choco install -y putty.install
 choco install -y packer
 choco install -y mysql.workbench

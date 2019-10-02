@@ -16,7 +16,6 @@ brew tap homebrew/completions
 brew install docker-completion
 brew install docker-compose-completion
 brew install docker-machine-completion
-brew install vagrant-completion
 
 if [ "$ZSH_INSTALL" == "1" ]; then
     echo -e "Installing Zsh..."
@@ -55,17 +54,6 @@ fi
 if [ "$DOCKER_INSTALL" == "1" ]; then
     echo -e "Installing Docker..."
     brew cask install docker
-fi
-
-if [ "$VIRTUALBOX_INSTALL" == "1" ]; then
-    echo -e "Installing Virtualbox..."
-    brew cask install virtualbox
-fi
-
-if [ "$VAGRANT_INSTALL" == "1" ]; then
-    echo -e "Installing Vagrant..."
-    brew cask install vagrant
-    brew cask install vagrant-manager
 fi
 
 if [ "$PHP_INSTALL" == "1" ]; then
