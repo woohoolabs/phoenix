@@ -31,6 +31,6 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras wd docker vagrant)
+plugins=(git git-extras wd docker)
 
 source $ZSH/oh-my-zsh.sh

@@ -25,12 +25,6 @@ export GPG_INSTALL=1
 # Docker
 export DOCKER_INSTALL=1
 
-# Virtualbox
-export VIRTUALBOX_INSTALL=1
-
-# Vagrant
-export VAGRANT_INSTALL=1
-
 # PHP
 export PHP_INSTALL=1
 

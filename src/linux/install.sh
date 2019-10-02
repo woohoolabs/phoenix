@@ -27,17 +27,6 @@ if [ "$DOCKER_INSTALL" == "1" ]; then
     sudo apt-get -y install docker
 fi
 
-if [ "$VIRTUALBOX_INSTALL" == "1" ]; then
-    echo -e "Installing Virtualbox..."
-    sudo apt-get -y install virtualbox
-fi
-
-if [ "$VAGRANT_INSTALL" == "1" ]; then
-    echo -e "Installing Vagrant..."
-    sudo apt-get -y install vagrant
-    sudo apt-get -y install vagrant-manager
-fi
-
 if [ "$PHP_INSTALL" == "1" ]; then
     echo -e "Installing PHP..."
     sudo apt-get -y install php71

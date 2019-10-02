@@ -27,15 +27,6 @@ if [ "$DOCKER_INSTALL" == "1" ]; then
     docker-machine --version
 fi
 
-if [ "$VIRTUALBOX_INSTALL" == "1" ]; then
-    echo -e "Virtualbox:"
-fi
-
-if [ "$VAGRANT_INSTALL" == "1" ]; then
-    echo -e "Vagrant:"
-    vagrant -v
-fi
-
 if [ "$PHP_INSTALL" == "1" ]; then
     echo -e "PHP:"
     php -v
