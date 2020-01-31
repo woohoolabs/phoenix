@@ -49,5 +49,8 @@ export POSTMAN_INSTALL=1
 # Slack
 export SLACK_INSTALL=1
 
+# PHP Development Tools
+export PHP_DEV_TOOLS_INSTALL=1
+
 # Helper
 export DOLLAR='$'
