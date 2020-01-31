@@ -4,11 +4,6 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
 
 alias woohoo='~/woohoo/phoenix/woohoo'
 alias entrainr='make --directory=~/woohoo/entrainr/'
-alias lakasok='make --directory=~/woohoo/debrecenilakasok/'
-
-alias bench='brew services restart php && brew services restart nginx && (cd ~/woohoo/php-di-container-benchmarks && ./benchmark.sh host http://localhost:8888) && brew services stop nginx && brew services stop php)
-alias bench_up='brew services start php && brew services start nginx'
-alias bench_down='brew services stop php && brew services stop nginx'
 
 ZSH=$HOME/.oh-my-zsh
 

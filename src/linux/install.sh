@@ -61,3 +61,8 @@ if [ "$POSTMAN_INSTALL" == "1" ]; then
     echo -e "Installing Postman..."
     sudo apt-get -y install postman
 fi
+
+if [ "$SLACK_INSTALL" == "1" ]; then
+    echo -e "Installing Slack..."
+    sudo apt-get -y install slack
+fi

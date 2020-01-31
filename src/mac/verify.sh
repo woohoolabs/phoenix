@@ -74,3 +74,8 @@ if [ "$POSTMAN_INSTALL" == "1" ]; then
     echo -e "Postman:"
     brew cask info postman
 fi
+
+if [ "$SLACK_INSTALL" == "1" ]; then
+    echo -e "Slack:"
+    brew cask info slack
+fi

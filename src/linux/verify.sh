@@ -52,3 +52,7 @@ fi
 if [ "$POSTMAN_INSTALL" == "1" ]; then
     echo -e "Postman:"
 fi
+
+if [ "$SLACK_INSTALL" == "1" ]; then
+    echo -e "Slack:"
+fi

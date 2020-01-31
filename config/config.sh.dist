@@ -38,13 +38,16 @@ export PHP_STORM_INSTALL=1
 export MYSQL_WORKBENCH_INSTALL=1
 
 # Nginx
-export NGINX_INSTALL=1
+export NGINX_INSTALL=0
 
 # Poedit
 export POEDIT_INSTALL=1
 
 # Postman
 export POSTMAN_INSTALL=1
+
+# Slack
+export SLACK_INSTALL=1
 
 # Helper
 export DOLLAR='$'

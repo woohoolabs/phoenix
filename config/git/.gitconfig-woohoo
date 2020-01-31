@@ -27,3 +27,20 @@
 
 [url "ssh://git@gitlab.com"]
     insteadOf = https://gitlab.com
+
+[merge]
+	tool = phpstorm
+
+[diff]
+	tool = phpstorm
+
+[difftool]
+	prompt = false
+
+[difftool "phpstorm"]
+	cmd = /usr/local/bin/phpstorm2 diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+	trustExitCode = true
+
+[mergetool "phpstorm"]
+	cmd = /usr/local/bin/phpstorm2 merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+	trustExitCode = truede = true
