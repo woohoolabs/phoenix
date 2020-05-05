@@ -61,7 +61,7 @@ if [ "$PHP_INSTALL" == "1" ]; then
     brew tap homebrew/dupes
     brew tap homebrew/versions
     brew tap homebrew/homebrew-php
-    brew install php74
+    brew install php@7.4
 fi
 
 if [ "$COMPOSER_INSTALL" == "1" ]; then
