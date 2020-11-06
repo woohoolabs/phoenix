@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
-echo -e "Installing Xcode..."
-xcode-select --install
+if [ "$XCODE_INSTALL" == "1" ]; then
+    echo -e "Installing Xcode..."
+    xcode-select --install
+fi
 
 echo -e "Installing Homebrew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
