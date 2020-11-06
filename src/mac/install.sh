@@ -7,7 +7,7 @@ if [ "$XCODE_INSTALL" == "1" ]; then
 fi
 
 echo -e "Installing Homebrew..."
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo -e "Installing Gettext..."
 brew install gettext
@@ -15,7 +15,7 @@ ln -s -f /usr/local/opt/gettext/bin/envsubst /usr/local/bin/envsubst
 
 echo -e "Installing Bash completions..."
 brew install bash-completion
-brew tap homebrew/completions
+brew tap homebrew/homebrew-core
 brew install docker-completion
 brew install docker-compose-completion
 brew install docker-machine-completion
@@ -29,6 +29,7 @@ if [ "$ZSH_INSTALL" == "1" ]; then
 
     echo -e "Installing Oh-My-Zshell..."
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    rm -Rf ~/.oh-my-zsh/custom/themes/powerlevel9k
     git clone --depth 1 https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
     echo -e "Installing Powerline fonts..."
