@@ -32,10 +32,10 @@ if [ "$ZSH_INSTALL" == "1" ]; then
     git clone --depth 1 https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
     echo -e "Installing Powerline fonts..."
-    git clone https://github.com/powerline/fonts.git /Library/Fonts/Powerline\ Fonts
-    powerline-daemon -q
-    powerline_base=$(pip show powerline-status | awk '{FS = ": "} $1 ~ /Location/ {print $2}')
-    source "${powerline_base}/powerline/bindings/zsh/powerline.zsh"
+    rm -Rf /tmp/fonts
+    git clone https://github.com/powerline/fonts.git --depth=1 /tmp/fonts
+    /tmp/fonts/install.sh
+    rm -rf /tmp/fonts      
 fi
 
 if [ "$CHROME_INSTALL" == "1" ]; then
@@ -61,9 +61,6 @@ fi
 
 if [ "$PHP_INSTALL" == "1" ]; then
     echo -e "Installing PHP..."
-    brew tap homebrew/dupes
-    brew tap homebrew/versions
-    brew tap homebrew/homebrew-php
     brew install php@7.4
 fi
 

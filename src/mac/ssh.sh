@@ -40,11 +40,11 @@ elif [ "$1" == "import" ]; then
     source $BASEPATH/config/ssh/$2.sh
 
     # Creating the public key
-    echo $SSH_PUBLIC_KEY > ~/.ssh/$2.pub
-    chmod 644 ~/.ssh/$2.pub
+    echo "$SSH_PUBLIC_KEY" > ~/.ssh/$2.pub
+    chmod 600 ~/.ssh/$2.pub
 
     # Creating the private key
-    echo $SSH_PRIVATE_KEY > ~/.ssh/$2
+    echo "$SSH_PRIVATE_KEY" > ~/.ssh/$2
     chmod 600 ~/.ssh/$2.pub
 
     rm $BASEPATH/config/ssh/$2.sh
