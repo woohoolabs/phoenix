@@ -67,15 +67,20 @@ fi
 if [ "$COMPOSER_INSTALL" == "1" ]; then
     echo -e "Installing Composer..."
 
-    EXPECTED_SIGNATURE="$(curl -s https://composer.github.io/installer.sig)"
-    ACTUAL_SIGNATURE="$(php -r 'echo hash_file("sha384", "composer-setup.php");')"
+    EXPECTED_CHECKSUM="$(curl -q -o - https://composer.github.io/installer.sig)"
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    ACTUAL_CHECKSUM="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
 
-    if [ "$EXPECTED_CHECKSUM" != "$ACTUAL_CHECKSUM" ]; then
-        echo "ERROR: Invalid installer checksum" 1>&2
-        rm -f composer-setup.php
-        exit 128
+    if [ "$EXPECTED_CHECKSUM" != "$ACTUAL_CHECKSUM" ]
+    then
+        >&2 echo 'ERROR: Invalid installer checksum'
+        rm composer-setup.php
+        exit 1
     fi
 
+    php composer-setup.php --quiet
+    rm composer-setup.php
+    
     mv composer.phar /usr/local/bin/composer
     chmod +x /usr/local/bin/composer
     composer --quiet
