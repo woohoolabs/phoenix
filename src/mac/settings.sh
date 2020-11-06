@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 echo -e "Setting standby delay to 4 hours..."
 sudo pmset -a standbydelay 14400

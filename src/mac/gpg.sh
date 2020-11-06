@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 if [ "$1" == "config" ]; then
 
@@ -43,7 +44,7 @@ elif [ "$1" == "import" ]; then
     fi
 
     gpg --import $BASEPATH/config/gpg/$2.asc
-    rm $BASEPATH/config/gpg/$2.sh
+    rm $BASEPATH/config/gpg/$2.asc
 
 elif [ "$1" == "help" ]; then
 
