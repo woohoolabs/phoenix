@@ -29,14 +29,14 @@ if [ "$ZSH_INSTALL" == "1" ]; then
 
     echo -e "Installing Oh-My-Zshell..."
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    rm -Rf ~/.oh-my-zsh/custom/themes/powerlevel9k
-    git clone --depth 1 https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+    rm -Rf ~/.oh-my-zsh/custom/themes/powerlevel10k
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 
     echo -e "Installing Powerline fonts..."
     rm -Rf /tmp/fonts
     git clone https://github.com/powerline/fonts.git --depth=1 /tmp/fonts
     /tmp/fonts/install.sh
-    rm -rf /tmp/fonts      
+    rm -rf /tmp/fonts
 fi
 
 if [ "$CHROME_INSTALL" == "1" ]; then
@@ -81,7 +81,7 @@ if [ "$COMPOSER_INSTALL" == "1" ]; then
 
     php composer-setup.php --quiet
     rm composer-setup.php
-    
+
     mv composer.phar /usr/local/bin/composer
     chmod +x /usr/local/bin/composer
     composer --quiet

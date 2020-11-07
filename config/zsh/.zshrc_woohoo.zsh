@@ -15,7 +15,7 @@ CASE_SENSITIVE="true"
 # Preferred editor for local and remote sessions
 export EDITOR="nano"
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs)
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S}"
