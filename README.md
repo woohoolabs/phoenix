@@ -19,7 +19,7 @@
 
 ## Introduction
 
-Woohoo Labs. Phoenix helps you setting up and installing your development environment whatever platform you use.
+Woohoo Labs. Phoenix helps you set up and installing your development environment whatever platform you use.
 
 ## Install
 
@@ -56,6 +56,42 @@ cp config/zsh/.warprc.dist config/zsh/.warprc
 
 ## Usage
 
+First, you should customize `config/config.sh`. Then you can install the necessary dependencies:
+
+```bash
+./woohoo install
+```
+
+Afterwards, you should manually:
+- run Docker Desktop
+- set the iTerm2 color preset according to your preference (e.g. "Solarized Dark")
+- set the console font in iTerm2 and JetBrains IDE-s to "SourceCodeProPowerlineAwesomeRegular"
+
+Now, you should deploy the necessary configuration. In order to do so, first customize
+`config/zsh/.zshrc`, `config/git/.gitconfig`, and `config/zsh/.warprc`. Then run the following command:
+
+```bash
+./woohoo config
+```
+
+Afterwards, you can import your SSH and GPG configuration (if you don't have one yet, then you should rather
+generate new keys).
+
+```bash
+cp config/ssh/id_rsa.sh.dist config/ssh/id_rsa.sh
+# Fill in the $SSH_PUBLIC_KEY and $SSH_PRIVATE_KEY variables
+./woohoo ssh import id_rsa
+```
+
+Then
+
+```bash
+# Create a file with FILE_NAME containing your GPG key
+./woohoo gpg import {FILE_NAME}
+```
+
+## Features
+
 The `woohoo` command provides several subcommands:
 
 ### install
@@ -68,7 +104,7 @@ The `woohoo` command provides several subcommands:
 
 ### gpg
 
-You can refer to the `woohoo help` command for the current list of supported operations. 
+You can refer to the `woohoo help` command for the current list of supported operations.
 
 ## Versioning
 
