@@ -119,7 +119,7 @@ fi
 
 if [ "$PHP_DEV_TOOLS_INSTALL" == "1" ]; then
     echo -e "Installing PHP development tools..."
-    brew install autoconf automake libtool bison re2c libxml2 openssl icu4c
+    brew install autoconf automake libtool libiconv bison re2c libxml2 openssl pkg-config icu4c
     brew link bison --force
     brew link libxml2 --force
     brew link icu4c --force
