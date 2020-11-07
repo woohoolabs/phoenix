@@ -16,7 +16,7 @@ elif [ "$1" == "generate" ]; then
 
     if [ "$2" == "" ]; then
         echo -e "Usage: woohoo ssh generate KEY_NAME YOUR_EMAIL_ADDRESS"
-        exit -1
+        exit 1
     fi
 
     # Setting up the SSH directory
@@ -30,7 +30,7 @@ elif [ "$1" == "import" ]; then
 
     if [ "$2" == "" ]; then
         echo -e "Usage: woohoo ssh import KEY_NAME"
-        exit -1
+        exit 1
     fi
 
     # Setting up the SSH directory

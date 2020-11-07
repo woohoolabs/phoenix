@@ -13,12 +13,12 @@ elif [ "$1" == "generate" ]; then
 
     if [ "$2" == "" ]; then
         echo -e "Usage: woohoo gpg generate USER_NAME USER_EMAIL"
-        exit -1
+        exit 1
     fi
 
     if [ "$3" == "" ]; then
         echo -e "Usage: woohoo gpg generate USER_NAME USER_EMAIL"
-        exit -1
+        exit 1
     fi
 
     cat > /tmp/gpg.txt <<EOF
@@ -40,7 +40,7 @@ elif [ "$1" == "import" ]; then
 
     if [ "$2" == "" ]; then
         echo -e "Usage: woohoo gpg import KEY_NAME"
-        exit -1
+        exit 1
     fi
 
     gpg --import $BASEPATH/config/gpg/$2.asc
