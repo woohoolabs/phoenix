@@ -56,5 +56,8 @@ export SLACK_INSTALL=1
 # PHP Development Tools
 export PHP_DEV_TOOLS_INSTALL=1
 
+# Aerial Screen Saver
+export AERIAL_INSTALL=1
+
 # Helper
 export DOLLAR='$'

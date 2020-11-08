@@ -124,3 +124,8 @@ if [ "$PHP_DEV_TOOLS_INSTALL" == "1" ]; then
     brew link libxml2 --force
     brew link icu4c --force
 fi
+
+if [ "$AERIAL_INSTALL" == "1" ]; then
+    echo -e "Installing Aerial screen saver..."
+    brew cask install aerial
+fi
